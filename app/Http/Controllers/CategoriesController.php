@@ -14,8 +14,13 @@
 
             $categories = DB::connection('mysql')->select('select * from categories');
 
-            return view('listagem')->with('categories', $categories);  
+            return view('listagem', ['categories'=> $categories]);  /**Chama a view listagem passando categories como chave e 
+                                                                    $categories como valor pois  contem todas as categorias, carregadas
+                                                                    do banco de dados, prontas para serem usadas pela view
+             return view('listagem')->withCategories($categories);                           **/                                           
+        
         }
+
     }
 
 ?>

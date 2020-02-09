@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/list/categories', 'CategoriesController@list');
 
 Route::get('/login','LoginController@login');
+
+Route::get('/categories/description', 'CategoriesController@description');

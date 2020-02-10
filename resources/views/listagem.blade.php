@@ -7,7 +7,7 @@
 
     <select>
         <?php foreach ($categories as $category): ?>
-            <option value="<?php $category->id ?>"> <?php print $category->name ?></option>
+            <option value=" {{$category->id}} "> {{$category->name}} </option>
         <?php endforeach ?>
     </select>
 @stop

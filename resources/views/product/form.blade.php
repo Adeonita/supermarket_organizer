@@ -3,15 +3,27 @@
 @section('newProduct')
     <h1>Castro de Produtos</h1>
     <form>
-        <label>Nome</label>
-        <input/>
-        <label>Descricao</label>
-        <input/>
-        <label>Valor</label>
-        <input/>
-        <label>Quantidade</label>
-        <input type="number"/>
-        <label for="cars">Categoria:</label>
-        <button type="submit">Submit</button>
+        <div class="form-group">
+            <label>Nome</label>
+            <input class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Descricao</label>
+            <input class="form-control">
+        </div>
+            <div class="form-group">
+            <label>Valor</label>
+            <input class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Quantidade</label>
+            <input type="number" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Categoria</label>
+        </div>
+        <button type="submit" class="btn
+        btn-primary btn-block">Submit</button>
     </form>
+            
 @stop

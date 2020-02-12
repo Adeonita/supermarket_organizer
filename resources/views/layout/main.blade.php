@@ -10,6 +10,7 @@ do extends('main').-->
     <body>
         <div class="container">
             @yield('selectCategory') <!--Aqui entrará o conteúdo das demais views-->
+            @yield('newProduct') <!--Aqui entrará o conteúdo das demais views-->
         </div>
     </body>
 </html>

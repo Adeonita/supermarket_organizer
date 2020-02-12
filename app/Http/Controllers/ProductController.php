@@ -4,7 +4,7 @@
     class ProductController extends Controller{
 
         public function create(){
-            return view('new/form');
+            return view('product/form');
         }
     }
 ?>

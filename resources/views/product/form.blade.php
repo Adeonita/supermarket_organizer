@@ -2,7 +2,7 @@
 
 @section('newProduct')
     <h1>Castro de Produtos</h1>
-    <form action="product/add">
+    <form action="product/add" method="post">
         <div class="form-group">
             <label>Nome</label>
             <input name="name" class="form-control">

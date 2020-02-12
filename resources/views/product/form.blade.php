@@ -2,7 +2,7 @@
 
 @section('newProduct')
     <h1>Castro de Produtos</h1>
-    <form action="product/add" method="post">
+    <form action="/product/add" method="post">
         <!--Inserção de token para evitar envios maliciosos-->
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
         <div class="form-group">
@@ -14,15 +14,11 @@
             <input name="description" class="form-control">
         </div>
             <div class="form-group">
-            <label>Valor</label>
-            <input name="value" class="form-control">
+            <label>Preço</label>
+            <input name="price" class="form-control">
         </div>
         <div class="form-group">
-            <label>Quantidade</label>
-            <input name="amount" type="number" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Categoria</label>
+            @include('categories/listagem', ['categories'=> $categories])
         </div>
         <button type="submit" class="btn
         btn-primary btn-block">Submit</button>

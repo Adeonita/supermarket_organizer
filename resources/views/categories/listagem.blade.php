@@ -1,14 +1,6 @@
-@extends('layout/main')
-
-@section('selectCategory')
-    <h2>Selecione uma categoria</h2>
-
-    <label for="cars">Categoria:</label>
-
-    <select>
-       @foreach ($categories as $category):
-            <option value=" {{$category->id}} "> {{$category->name}} </option>
-        @endforeach
-    </select>
-@stop
-        
+<label for="category">Categoria:</label>
+<select id="category" name="category_id">
+@foreach ($categories as $category):
+    <option value=" {{$category->id}} "> {{$category->name}} </option>
+@endforeach
+</select>

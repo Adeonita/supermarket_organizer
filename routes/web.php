@@ -21,6 +21,6 @@ Route::get('/login','LoginController@login');
 
 Route::get('/categories/description', 'CategoriesController@description');
 
-Route::get('product/form', 'ProductController@form');
+Route::get('product/create', 'ProductController@create');
 
-Route::get('product/add', 'ProductController@add');
+Route::post('product/add', 'ProductController@add');

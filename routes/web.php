@@ -20,3 +20,5 @@ Route::get('/list/categories', 'CategoriesController@list');
 Route::get('/login','LoginController@login');
 
 Route::get('/categories/description', 'CategoriesController@description');
+
+Route::get('product/new', 'ProductController@create');

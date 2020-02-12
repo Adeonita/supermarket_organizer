@@ -5,19 +5,19 @@
     <form>
         <div class="form-group">
             <label>Nome</label>
-            <input class="form-control">
+            <input name="name" class="form-control">
         </div>
         <div class="form-group">
             <label>Descricao</label>
-            <input class="form-control">
+            <input name="description" class="form-control">
         </div>
             <div class="form-group">
             <label>Valor</label>
-            <input class="form-control">
+            <input name="value" class="form-control">
         </div>
         <div class="form-group">
             <label>Quantidade</label>
-            <input type="number" class="form-control">
+            <input name="amount" type="number" class="form-control">
         </div>
         <div class="form-group">
             <label>Categoria</label>

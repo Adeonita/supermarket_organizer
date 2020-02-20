@@ -7,12 +7,7 @@
 
     class ListController extends Controller{
 
-        /**
-         * Function for create one list
-         */
-        public function create(){
-            return view('/list/form');
-        }
+        
 
         public function store(ListRequest $request){
             $result = List::create($request->all());

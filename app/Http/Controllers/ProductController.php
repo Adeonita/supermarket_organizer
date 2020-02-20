@@ -9,15 +9,15 @@
     class ProductController extends Controller{
 
         public function index(){
-            $request = Product::all();
-            $response = response()->json($request);
+            $products = Product::all();
+            $response = response()->json($products);
 
             return $response;
         }
 
         public function store(RequestProduct $request){
-            $request = Product::all();
-            $response = response()->json($request);
+            $product = Product::create($request->all());
+            $response = response()->json($product);
 
             return $response;
         }
@@ -28,29 +28,29 @@
          * @return: json
          */
         public function update($id){
-            $request = Product::find($id);
-            $request->name = Request::input('name');
-            $request->price = Request::input('price');
-            $request->description = Request::input('description');
-            $request->category_id = Request::input('category_id'); 
-            $request->save();  
-            $response = response()->json($request);
+            $product = Product::find($id);
+            $product->name = Request::input('name');
+            $product->price = Request::input('price');
+            $product->description = Request::input('description');
+            $product->category_id = Request::input('category_id'); 
+            $product->save();  
+            $response = response()->json($product);
 
             return $response;
         }
 
         public function show($id){
-            $request = Product::find($id);
-            $request = Product::all();
-            $response = response()->json($request);
+            $product = Product::find($id);
+            $product = Product::all();
+            $response = response()->json($product);
 
-            return $request;
+            return $response;
         }
 
         public function delete($id){
-            $request = Product::find($id);
-            $request = $request->delete();
-            $response = response()->json($request);
+            $product = Product::find($id);
+            $product = $product->delete();
+            $response = response()->json($product);
 
             return $response;
         }

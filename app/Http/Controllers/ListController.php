@@ -7,24 +7,42 @@
 
     class ListController extends Controller{
 
-        
+        public funcion index(){
+            $lists = List::all();
+            $response = response()->json($list);
 
-        public function store(ListRequest $request){
-            $result = List::create($request->all());
-            $response = json->response($result);
             return $response;
         }
 
-        public function insert(){
+        public function store(ListRequest $request){
+            $list = List::create($request->all());
+            $response = response()->json($list);
 
+            return $response;
         }
 
-        public function update(){
+        public function update($id){
+            $list = List::find($id);
+            $list->name = Request::input('name');
+            $list->description = Request::input('description');
+            $list->save();
 
+            $response = response()->json($list);
+            return $response;
         }
 
-        public function delete(){
-            
+        public function delete($id){
+            $result = List::find($id);
+            $result->delete();
+
+            return $result;
+        }
+
+        public function show($id){
+            $list = List::find($id);
+            $response = response()->json($list);
+
+            return $response;
         }
     }
 ?>

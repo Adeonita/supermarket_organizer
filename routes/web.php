@@ -26,8 +26,9 @@ Route::get('product/create', 'ProductController@create');
 Route::post('product/add', 'ProductController@add');
 
 //List
-Route::get('list/create', ['as' => 'createList', 'uses' => 'ListController@create']);
-Route::post('list/add', ['as' => 'insertList', 'uses' => 'Listcontroller@insert']);
-Route::put('list/updade', ['as'=> 'updateList', 'uses' => 'ListController@update']);
-Route::delete('list/Delete', ['as' => 'deleteList', 'uses' => 'ListController@delete']);
+Route::get('list', ['as' => 'createList', 'uses' => 'ListController@create']);
+Route::post('list', ['as' => 'storeList', 'uses'] => 'ListController@store');
+Route::post('list', ['as' => 'insertList', 'uses' => 'Listcontroller@insert']);
+Route::put('list', ['as'=> 'updateList', 'uses' => 'ListController@update']);
+Route::delete('list', ['as' => 'deleteList', 'uses' => 'ListController@delete']);
 

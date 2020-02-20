@@ -13,7 +13,7 @@ class ListRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class ListRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:50',
+            'description' => 'required|max:100'
+        ];
+    }
+
+    public function menssages(){
+        return [
+            'required' => 'O campo :attribute não pode ser vazio'
         ];
     }
 }

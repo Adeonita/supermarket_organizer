@@ -15,20 +15,16 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/list/categories', 'CategoriesController@list');
-
-Route::get('/login','LoginController@login');
-
-Route::get('/categories/description', 'CategoriesController@description');
-
-Route::get('product/create', 'ProductController@create');
-
-Route::post('product/add', 'ProductController@add');
+//Products
+Route::get('/product', 'ProductController@index'); //List all products
+Route::get('/product/{id}', 'ProductController@show')->where('id', '[0-9]+'); //List product{id}
+Route::post('product', 'ProductController@store'); //Insert one product
+Route::put('product/{id}', 'ProductController@update')->where('id', '[0-9]+'); //Update product{id}
+Route::delete('product/{id}', 'ProductController@delete')->where('id', '[0-9]+'); //Delete product{id}
 
 //List
-Route::get('list', ['as' => 'createList', 'uses' => 'ListController@create']);
-Route::post('list', ['as' => 'storeList', 'uses'] => 'ListController@store');
-Route::post('list', ['as' => 'insertList', 'uses' => 'Listcontroller@insert']);
-Route::put('list', ['as'=> 'updateList', 'uses' => 'ListController@update']);
-Route::delete('list', ['as' => 'deleteList', 'uses' => 'ListController@delete']);
+Route::get('list','ListController@index'); //List all lists
+Route::post('list',  'ListController@store'); //Insert one list
+Route::put('list/{id}', 'ListController@update'); //Update list{id}
+Route::delete('list/{id}', 'ListController@delete'); //Delete list{id}
 

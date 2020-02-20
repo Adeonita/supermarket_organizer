@@ -27,5 +27,5 @@ Route::get('lists','ListController@index'); //List all lists
 Route::post('lists',  'ListController@store'); //Insert one list
 Route::put('lists/{id}', 'ListController@update'); //Update list{id}
 Route::delete('lists/{id}', 'ListController@delete'); //Delete list{id}
-Route::get('/lists/{id}', 'ListController@show') //Show list{id}
+Route::get('/lists/{id}', 'ListController@show'); //Show list{id}
 

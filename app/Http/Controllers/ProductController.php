@@ -13,7 +13,7 @@
             $response = response()
                         ->json($products)
                         ->setStatusCode(200);
-                        
+
             return $response;
         }
         /**
@@ -73,8 +73,8 @@
             $product = Product::find($id);
             $product = $product->delete();
             $response = response()
-                        ->json($product);
-                        ->setStatusCode(200)
+                        ->json($product)
+                        ->setStatusCode(200);
             return $response;
         }
     }

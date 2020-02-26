@@ -10,8 +10,10 @@
 
         public function index(){
             $products = Product::all();
-            $response = response()->json($products);
-
+            $response = response()
+                        ->json($products)
+                        ->setStatusCode(200);
+                        
             return $response;
         }
         /**
